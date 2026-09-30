@@ -119,7 +119,8 @@ export function Alerts({ vm, onRulesChange, onResetRules }: Props) {
           {vm.episodes.length === 0 ? (
             <EmptyState>No alert has fired yet in this replay.</EmptyState>
           ) : (
-            <div className="overflow-x-auto">
+            // relative: keeps the sr-only header span inside this scroll box instead of widening the page
+            <div className="relative overflow-x-auto">
               <table className={`${TABLE} min-w-[600px]`}>
                 <thead>
                   <tr>

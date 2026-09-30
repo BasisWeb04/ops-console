@@ -11,7 +11,8 @@ export function Failures({ vm }: { vm: ViewModel }) {
       {groups.length === 0 ? (
         <EmptyState>No errors up to this point in the replay.</EmptyState>
       ) : (
-        <div className="overflow-x-auto">
+        // relative: the sr-only span is absolutely positioned and would otherwise escape this scroll box and widen the page
+        <div className="relative overflow-x-auto">
           <table className={TABLE}>
             <thead>
               <tr>

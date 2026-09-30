@@ -59,3 +59,18 @@ describe("rendering", () => {
     expect(renderToString(<Overview vm={vm} />)).toContain("no data");
   });
 });
+
+describe("mobile layout", () => {
+  it("keeps sr-only spans inside their table scroll boxes so the page cannot scroll sideways", () => {
+    const vm = viewModelAt(dayStart(12) + 12 * 60 * MINUTE_MS);
+    const failures = renderToString(<Failures vm={vm} />);
+    const alerts = renderToString(<Alerts vm={vm} onRulesChange={() => {}} onResetRules={() => {}} />);
+    for (const html of [failures, alerts]) {
+      const at = html.indexOf("sr-only");
+      expect(at).toBeGreaterThan(-1);
+      // The nearest scroll-box wrapper before the sr-only span must be a positioned one.
+      const wrapper = html.lastIndexOf('overflow-x-auto">', at);
+      expect(html.slice(wrapper - 9, wrapper)).toBe("relative ");
+    }
+  });
+});
