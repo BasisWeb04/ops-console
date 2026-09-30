@@ -2,6 +2,10 @@
 
 A replayable operations dashboard for a small company's scheduled automations: run health, grouped failures, daily spend against a budget, and an editable alert rule engine, driven by a seeded 14-day simulation.
 
+**Live demo:** https://ops-console-sable.vercel.app (fictional data)
+
+![Ops Console alerts view: alert episodes with the numbers behind each firing](docs/screenshot.png)
+
 ## What this demonstrates
 
 - A deterministic, seeded simulator (`src/sim/`) that produces 14 days of runs for six jobs, with three injected incidents: a vendor rate-limit storm, a scheduler that silently stops, and an SMS cost spike. Same seed, same data, checked by test.
