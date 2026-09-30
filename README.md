@@ -10,7 +10,7 @@ A replayable operations dashboard for a small company's scheduled automations: r
 - A test for each injected incident proving the default rules fire it, repeated on five other seeds so detection does not depend on a lucky seed.
 - A dense internal-tool UI in React and Tailwind: hand-written SVG charts, a time scrubber that replays the 14 days, a validated rules editor, light and dark themes, keyboard focus styles, status shown by shape and text as well as color, and a colorblind-safe (Okabe-Ito) job palette.
 
-Live demo: (link added at publish)
+Live demo: https://ops-console-sable.vercel.app
 
 ## Run it
 
