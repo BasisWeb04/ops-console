@@ -73,7 +73,7 @@ On the default seed (20260930) the replay produces these alert episodes:
 
 ## Tests
 
-`npm test` runs 73 tests in 8 files with Vitest, in Node, offline.
+`npm test` runs 74 tests in 8 files with Vitest, in Node, offline.
 
 - `sim/simulate.test.ts`: seed determinism, seed sensitivity, data invariants (unique ids, sort order, integer cents, attempts consistent with status, logs present on errors), each injected incident present in the raw data.
 - `metrics/percentile.test.ts`: nearest-rank p95 on empty, 1, 10, 20 and 100 values, unsorted input, no interpolation, invalid percentiles.
